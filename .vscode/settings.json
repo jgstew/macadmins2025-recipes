@@ -14,5 +14,6 @@
       "**.recipe.yaml",
       "**.recipe.yml"
     ]
-  }
+  },
+  "python.defaultInterpreterPath": "./.venv/bin/python3"
 }
