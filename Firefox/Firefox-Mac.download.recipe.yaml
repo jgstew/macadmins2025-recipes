@@ -1,0 +1,20 @@
+---
+Description: Download Firefox for MacOS
+Identifier: com.github.macadmins.Firefox-Mac
+Input:
+  NAME: Firefox-Mac
+  os: osx
+  filename: Firefox.dmg
+MinimumVersion: "2.3"
+Process:
+  - Processor: com.github.jgstew.SharedProcessors/URLDownloaderPython
+    Arguments:
+      url: https://download.mozilla.org/?product=firefox-latest-ssl&os=%os%&lang=en-US
+      COMPUTE_HASHES: True
+
+  - Processor: EndOfCheckPhase
+
+  - Processor: com.github.jgstew.SharedProcessors/TextSearcher
+    Arguments:
+      input_string: "%download_url%"
+      re_pattern: 'releases/(?P<version>\d+(\.\d+)+)/'
