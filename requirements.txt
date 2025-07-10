@@ -1,0 +1,19 @@
+besapi
+bigfix_prefetch
+cairosvg
+certifi
+chevron
+desktop_notifier
+generate_bes_from_template
+hachoir
+icoextract
+jsonpath_ng
+looseversion
+olefile
+pefile
+Pillow
+pre-commit
+python-magic
+python-magic-bin; sys_platform == 'win32'
+signify
+validate_bes_xml
