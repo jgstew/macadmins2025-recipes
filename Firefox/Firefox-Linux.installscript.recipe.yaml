@@ -1,4 +1,3 @@
-# https://download.mozilla.org/?product=firefox-latest-ssl&os=osx&lang=en-US
 ---
 Description: Creates an install script for the latest version of Firefox
 Identifier: com.github.macadmins.installscript.Firefox-Linux
