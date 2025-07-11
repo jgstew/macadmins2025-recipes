@@ -1,6 +1,6 @@
 ---
 Description: Download Firefox for MacOS
-Identifier: com.github.macadmins.Firefox-Mac
+Identifier: com.github.macadmins.download.Firefox-Mac
 Input:
   NAME: Firefox-Mac
   os: osx

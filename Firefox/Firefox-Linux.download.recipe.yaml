@@ -1,6 +1,6 @@
 ---
 Description: download Firefox for Linux
-Identifier: com.github.macadmins.Firefox-Linux
+Identifier: com.github.macadmins.download.Firefox-Linux
 Input:
   NAME: Firefox-Linux
   os: linux64
@@ -9,4 +9,4 @@ Input:
   # https://download.mozilla.org/?product=firefox-latest-ssl&os=osx&lang=en-US
   # https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US
 MinimumVersion: "2.3"
-ParentRecipe: com.github.macadmins.Firefox-Mac
+ParentRecipe: com.github.macadmins.download.Firefox-Mac
