@@ -3,7 +3,6 @@ Description: Creates an homebrew cask for the latest version of Firefox
 Identifier: com.github.macadmins.cask.Firefox-Mac
 Input:
   NAME: "Firefox"
-  product: firefox-latest-ssl
   OS: osx
   filename: Firefox.dmg
 MinimumVersion: "2.3"
