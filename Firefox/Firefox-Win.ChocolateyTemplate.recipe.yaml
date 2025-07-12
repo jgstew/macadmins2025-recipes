@@ -1,4 +1,3 @@
-# https://download.mozilla.org/?product=firefox-latest-ssl&os=osx&lang=en-US
 ---
 Description: Creates an choco package for the latest version of Firefox
 Identifier: com.github.macadmins.ChocolateyTemplate.Firefox-Win64
@@ -20,7 +19,7 @@ Process:
       pathname: "%RECIPE_CACHE_DIR%/tmp/tools/chocolateyInstall.ps1"
       touch_create_folders: True
 
-  # create Firefox.nuspec from template
+  # create nuspec from template
   - Processor: com.github.jgstew.SharedProcessors/ContentFromTemplate
     Arguments:
       template_file_path: "%RECIPE_DIR%/Firefox-Win.ChocolateyTemplate.Firefox.nuspec"
