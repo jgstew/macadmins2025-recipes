@@ -25,4 +25,4 @@ Process:
 
   - Processor: com.github.jgstew.SharedProcessors/BESImport
 
-  - Processor: com.github.jgstew.SharedProcessors/BigFixActioner
+  # - Processor: com.github.jgstew.SharedProcessors/BigFixActioner
