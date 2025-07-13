@@ -31,9 +31,6 @@ This task will download and install "Mozilla Firefox v127.0.2" package onto sele
 prefetch FirefoxSetup.exe sha1:97d16ec0c749ede9244446507ed4ae53f4c7a873 size:64728328 https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US sha256:aa20d3d8f755f13db6091665439f310a850a86cd06d326c8db449ebacfa50051
 
 // Install:
-override wait
-hidden=true
-completion=job
 wait __Download\FirefoxSetup.exe /S
 
 // End]]></ActionScript>
