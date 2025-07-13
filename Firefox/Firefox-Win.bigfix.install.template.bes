@@ -31,9 +31,6 @@ This task will download and install "Mozilla Firefox v{{version}}" package onto 
 {{prefetch}}
 
 // Install:
-override wait
-hidden=true
-completion=job
 wait __Download\FirefoxSetup.exe /S
 
 // End]]></ActionScript>
