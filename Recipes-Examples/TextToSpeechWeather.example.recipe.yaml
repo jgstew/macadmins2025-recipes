@@ -60,7 +60,7 @@ Process:
   # read weather aloud:
   - Processor: com.github.jgstew.SharedProcessors/TextToSpeech
     Arguments:
-      input_string: "It is currently %current_temp% degrees out in %city_name% area"
+      input_string: "It is currently %current_temp% degrees out in %city_name% area."
 
   # - Processor: com.github.jgstew.SharedProcessors/Notifier
   #   Arguments:
