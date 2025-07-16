@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BES xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BES.xsd">
+	<Task>
+		<Title>Install: Mozilla Firefox v{{version}} - Windows</Title>
+		<Description><![CDATA[
+This task will download and install "Mozilla Firefox v{{version}}" package onto selected endpoints.
+		]]></Description>
+		<Relevance>windows of operating system</Relevance>
+		<Relevance><![CDATA[not exists keys whose(value "DisplayName" of it as string starts with "Mozilla Firefox") of keys "HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall" of (x32 registries; x64 registries)]]></Relevance>
+		<Category></Category>
+		<DownloadSize>{{DownloadSize}}</DownloadSize>
+		<Source>Mozilla</Source>
+		<SourceID></SourceID>
+		<SourceReleaseDate>{{SourceReleaseDate}}</SourceReleaseDate>
+		<SourceSeverity></SourceSeverity>
+		<CVENames></CVENames>
+		<SANSID></SANSID>
+		<MIMEField>
+			<Name>x-fixlet-modification-time</Name>
+			<Value>{{x-fixlet-modification-time}}</Value>
+		</MIMEField>
+		<Domain>BESC</Domain>
+		<DefaultAction ID="Action1">
+			<Description>
+				<PreLink>Click </PreLink>
+				<Link>here</Link>
+				<PostLink> to deploy Mozilla Firefox v{{version}}.</PostLink>
+			</Description>
+			<ActionScript MIMEType="application/x-Fixlet-Windows-Shell"><![CDATA[
+// Download:
+{{prefetch}}
+
+// Install:
+wait __Download\FirefoxSetup.exe /S
+
+// End]]></ActionScript>
+      		<SuccessCriteria Option="OriginalRelevance"></SuccessCriteria>
+		</DefaultAction>
+	</Task>
+</BES>

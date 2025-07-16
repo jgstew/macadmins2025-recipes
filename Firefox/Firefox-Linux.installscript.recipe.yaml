@@ -1,0 +1,18 @@
+---
+Description: Creates an install script for the latest version of Firefox
+Identifier: com.github.macadmins.installscript.Firefox-Linux
+Input:
+  NAME: Firefox-Linux
+  OS: linux64
+  filename: firefox.tar.xz
+MinimumVersion: "2.3"
+ParentRecipe: com.github.macadmins.download.Firefox-Linux
+Process:
+  # this is not actually BigFix specific, just sets up some defaults in the template dictionary:
+  - Processor: com.github.jgstew.SharedProcessors/BigFixSetupTemplateDictionary
+
+  # this generates the install script from the template
+  - Processor: com.github.jgstew.SharedProcessors/ContentFromTemplate
+    Arguments:
+      template_file_path: "%RECIPE_DIR%/firefox-install-linux.template.sh"
+      content_file_pathname: "%RECIPE_CACHE_DIR%/install-firefox-linux.sh"
