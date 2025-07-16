@@ -12,7 +12,7 @@ repos:
       - id: check-autopkg-recipe-list
       - id: check-autopkg-recipes
         args: ["--recipe-prefix=com.github.macadmins.", "--strict", "--"]
-        exclude: ".*.test.recipe.yaml"
+        exclude: ".*.download.recipe.yaml"
       # - id: forbid-autopkg-overrides
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
