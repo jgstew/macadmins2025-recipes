@@ -66,6 +66,7 @@ Process:
     Arguments:
       input_string: "It is currently %current_temp% degrees out in %city_name% area."
 
+  # send notification:
   - Processor: com.github.jgstew.SharedProcessors/Notifier
     Arguments:
       notification_app_name: "AutoPkg Weather"
