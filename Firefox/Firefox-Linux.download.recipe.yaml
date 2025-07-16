@@ -1,0 +1,9 @@
+---
+Description: Download firefox for Linux
+Identifier: com.github.macadmins.download.Firefox-Linux
+Input:
+  NAME: Firefox-Linux
+  filename: firefox.tar.xz
+  os: linux64
+MinimumVersion: "2.3"
+ParentRecipe: com.github.macadmins.download.Firefox-Mac
