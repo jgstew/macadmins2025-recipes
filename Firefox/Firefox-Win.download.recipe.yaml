@@ -3,12 +3,7 @@ Description: Download firefox for Windows
 Identifier: com.github.macadmins.download.Firefox-Win
 Input:
   NAME: Firefox-Win
+  filename: FirefoxSetup.exe
+  os: win64
 MinimumVersion: "2.3"
-Process:
-  - Processor: com.github.jgstew.SharedProcessors/URLDownloaderPython
-    Arguments:
-      url: https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US
-      filename: FirefoxSetup.exe
-      COMPUTE_HASHES: true
-
-  - Processor: EndOfCheckPhase
+ParentRecipe: com.github.macadmins.download.Firefox-Mac
