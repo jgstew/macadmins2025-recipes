@@ -1,0 +1,18 @@
+---
+Description: Creates an homebrew cask for the latest version of Firefox
+Identifier: com.github.macadmins.cask.Firefox-Mac
+Input:
+  NAME: "Firefox"
+  OS: osx
+  filename: Firefox.dmg
+MinimumVersion: "2.3"
+ParentRecipe: com.github.macadmins.download.Firefox-Mac
+Process:
+  # this is not actually BigFix specific, just sets up some defaults in the template dictionary:
+  - Processor: com.github.jgstew.SharedProcessors/BigFixSetupTemplateDictionary
+
+  # this generates the homebrew cask from the template
+  - Processor: com.github.jgstew.SharedProcessors/ContentFromTemplate
+    Arguments:
+      template_file_path: "%RECIPE_DIR%/firefox.template.rb"
+      content_file_pathname: "%RECIPE_CACHE_DIR%/firefox.rb"
