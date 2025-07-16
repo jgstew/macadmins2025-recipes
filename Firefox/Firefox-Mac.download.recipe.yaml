@@ -13,3 +13,8 @@ Process:
       COMPUTE_HASHES: true
 
   - Processor: EndOfCheckPhase
+
+  - Processor: com.github.jgstew.SharedProcessors/TextSearcher
+    Arguments:
+      input_string: "%download_url%"
+      re_pattern: 'releases/(?P<version>\d+(\.\d+)+)/'
